@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Fri May 10 23:50:48 IST 2019
+0.baseType=DIRECTORY
+0.base=C\:\\Users\\MY\\Desktop\\uvcarwashN\\uvcarwashN\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\out
+0.path=classes.dex
+0.set=DEX
+count=1

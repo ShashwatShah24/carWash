@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.uvcarwashn"
+    android:targetSandboxVersion="2"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="28" />
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission
+        android:name="com.example.uvcarwashn.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.example.uvcarwashn.permission.C2D_MESSAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/appName"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name="com.example.uvcarwashn.Help" />
+        <activity
+            android:name="com.example.uvcarwashn.emailisign_in"
+            android:label="@string/title_activity_emailisign_in" />
+        <activity android:name="com.example.uvcarwashn.MainActivity" />
+        <!--
+        <activity android:name=".About"/>
+        <activity android:name=".BookNow"/>
+        <activity android:name=".CarWashing2"/>
+        <activity android:name=".feedback"/>
+        <activity android:name=".Home"/>
+        <activity android:name=".HomeBottomNavigation"/>
+        <activity android:name=".InteriorCleaning2"/>
+        <activity android:name=".InteriorDryCleaning"/>
+        <activity android:name=".RubberCoat"/>
+        <activity android:name=".RubberCoat2"/>
+        <activity android:name=".Rubbing"/>
+        <activity android:name=".Rubbing2"/>
+        <activity android:name=".Services"/>
+        <activity android:name=".ServicesCardView"/>
+        <activity android:name=".Settings"/>
+        <activity android:name=".SplashScreenFrontPage"/>
+        <activity android:name=".TeflonCoat2"/>
+        <activity android:name=".TeflonCoating"/>
+        <activity android:name=".Waiting"/>
+        <activity android:name=".WashingExterior"/>
+        -->
+        <activity
+            android:name="com.example.uvcarwashn.BookNow"
+            android:label="Book Now" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ServicesCardView" />
+        </activity>
+        <activity
+            android:name="com.example.uvcarwashn.RubberCoat2"
+            android:label="Rubber Coat" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".BookNow" />
+        </activity>
+        <activity
+            android:name="com.example.uvcarwashn.TeflonCoat2"
+            android:label="Teflon Coat" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".BookNow" />
+        </activity>
+        <activity
+            android:name="com.example.uvcarwashn.Rubbing2"
+            android:label="Rubbing" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".BookNow" />
+        </activity>
+        <activity
+            android:name="com.example.uvcarwashn.InteriorCleaning2"
+            android:label="Interior Cleaning" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".BookNow" />
+        </activity>
+        <activity
+            android:name="com.example.uvcarwashn.CarWashing2"
+            android:label="Car Washing" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".BookNow" />
+        </activity>
+        <activity
+            android:name="com.example.uvcarwashn.Waiting"
+            android:label="Waiting" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ServicesCardView" />
+        </activity>
+        <activity
+            android:name="com.example.uvcarwashn.ServicesCardView"
+            android:label="@string/title_activity_services_card_view" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Home" />
+        </activity> <!-- android:theme="@style/AppTheme.NoActionBar" -->
+        <activity
+            android:name="com.example.uvcarwashn.RubberCoat"
+            android:label="Rubber Coat" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ServicesCardView" />
+        </activity>
+        <activity
+            android:name="com.example.uvcarwashn.TeflonCoating"
+            android:label="Teflon Coat" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ServicesCardView" />
+        </activity>
+        <activity
+            android:name="com.example.uvcarwashn.Rubbing"
+            android:label="Rubbing" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ServicesCardView" />
+        </activity>
+        <activity
+            android:name="com.example.uvcarwashn.InteriorDryCleaning"
+            android:value="Interior Dry Cleaning" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ServicesCardView" />
+        </activity>
+        <activity
+            android:name="com.example.uvcarwashn.WashingExterior"
+            android:value="Washing Exterior" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ServicesCardView" />
+        </activity>
+        <activity android:name="com.example.uvcarwashn.Services" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.uvcarwashn.feedback"
+            android:value="Feedback" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Home" />
+        </activity>
+        <activity
+            android:name="com.example.uvcarwashn.Settings"
+            android:value="Settings" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Home" />
+        </activity>
+        <activity
+            android:name="com.example.uvcarwashn.HomeBottomNavigation"
+            android:label="@string/title_activity_home_bottom_navigation" />
+        <activity
+            android:name="com.example.uvcarwashn.Home"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.uvcarwashn.About"
+            android:value="About" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Home" />
+        </activity>
+        <activity android:name="com.example.uvcarwashn.SplashScreenFrontPage" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService" >
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
+
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true"
+            android:exported="false" >
+        </receiver>
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.INSTALL_PACKAGES" >
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <receiver
+            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.example.uvcarwashn" />
+            </intent-filter>
+        </receiver>
+        <!--
+             FirebaseInstanceIdService performs security checks at runtime,
+             no need for explicit permissions despite exported="true"
+        -->
+        <service
+            android:name="com.google.firebase.iid.FirebaseInstanceIdService"
+            android:exported="true" >
+            <intent-filter android:priority="-500" >
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:authorities="com.example.uvcarwashn.firebaseinitprovider"
+            android:exported="false"
+            android:initOrder="100" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WashingExterior"
+    android:orientation="vertical"
+    android:background="@drawable/btn_back8">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingTop="46dp"
+        android:paddingRight="24dp">
+
+        <TextView
+            android:id="@+id/input_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:inputType="text
+"
+            android:padding="20dp"
+            android:text="Car Washing"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/input_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rate- ₹ 300"
+            android:padding="10dp"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/input_subject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Time- 15 to 20 mins"
+            android:padding="10dp"
+            android:textSize="20dp"
+            android:textColor="#fff"
+            android:inputType="text" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="213dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:src="@drawable/carwashicon" />
+
+        <Button
+            android:id="@+id/WashingExteriorRegisterButton"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_width="195dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_back7"
+            android:text="Register "
+            android:textColor="#fff"
+            android:textSize="15dp" />
+
+
+
+    </LinearLayout>
+</LinearLayout>
